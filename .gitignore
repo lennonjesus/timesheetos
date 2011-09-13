@@ -5,3 +5,6 @@ out/*
 .project
 .classpath
 .settings
+*.ids
+*.ipr
+*.iws
