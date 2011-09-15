@@ -54,15 +54,6 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="fimAlmoco"><g:message code="dia.fimAlmoco.label" default="Fim Almoco"/></label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'fimAlmoco', 'errors')}">
-
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
                         <label for="inicioAlmoco"><g:message code="dia.inicioAlmoco.label"
                                                              default="Inicio Almoco"/></label>
                     </td>
@@ -73,10 +64,10 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="observacoes"><g:message code="dia.observacoes.label" default="Observacoes"/></label>
+                        <label for="fimAlmoco"><g:message code="dia.fimAlmoco.label" default="Fim Almoco"/></label>
                     </td>
-                    <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'observacoes', 'errors')}">
-                        <g:textField name="observacoes" value="${diaInstance?.observacoes}"/>
+                    <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'fimAlmoco', 'errors')}">
+
                     </td>
                 </tr>
 
@@ -86,6 +77,15 @@
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'saida', 'errors')}">
 
+                    </td>
+                </tr>
+
+                <tr class="prop">
+                    <td valign="top" class="name">
+                        <label for="observacoes"><g:message code="dia.observacoes.label" default="Observacoes"/></label>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'observacoes', 'errors')}">
+                        <g:textField name="observacoes" value="${diaInstance?.observacoes}"/>
                     </td>
                 </tr>
 

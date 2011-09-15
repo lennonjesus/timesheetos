@@ -48,13 +48,6 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name"><g:message code="dia.fimAlmoco.label" default="Fim Almoco"/></td>
-
-                <td valign="top" class="value">${fieldValue(bean: diaInstance, field: "fimAlmoco")}</td>
-
-            </tr>
-
-            <tr class="prop">
                 <td valign="top" class="name"><g:message code="dia.inicioAlmoco.label" default="Inicio Almoco"/></td>
 
                 <td valign="top" class="value">${fieldValue(bean: diaInstance, field: "inicioAlmoco")}</td>
@@ -62,9 +55,9 @@
             </tr>
 
             <tr class="prop">
-                <td valign="top" class="name"><g:message code="dia.observacoes.label" default="Observacoes"/></td>
+                <td valign="top" class="name"><g:message code="dia.fimAlmoco.label" default="Fim Almoco"/></td>
 
-                <td valign="top" class="value">${fieldValue(bean: diaInstance, field: "observacoes")}</td>
+                <td valign="top" class="value">${fieldValue(bean: diaInstance, field: "fimAlmoco")}</td>
 
             </tr>
 
@@ -72,6 +65,13 @@
                 <td valign="top" class="name"><g:message code="dia.saida.label" default="Saida"/></td>
 
                 <td valign="top" class="value">${fieldValue(bean: diaInstance, field: "saida")}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name"><g:message code="dia.observacoes.label" default="Observacoes"/></td>
+
+                <td valign="top" class="value">${fieldValue(bean: diaInstance, field: "observacoes")}</td>
 
             </tr>
 

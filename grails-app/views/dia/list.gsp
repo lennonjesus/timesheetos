@@ -31,18 +31,17 @@
 
                 <g:sortableColumn property="entrada" title="${message(code: 'dia.entrada.label', default: 'Entrada')}"/>
 
-                <g:sortableColumn property="fimAlmoco"
-                                  title="${message(code: 'dia.fimAlmoco.label', default: 'Fim Almoco')}"/>
-
                 <g:sortableColumn property="inicioAlmoco"
                                   title="${message(code: 'dia.inicioAlmoco.label', default: 'Inicio Almoco')}"/>
 
-                <g:sortableColumn property="observacoes"
-                                  title="${message(code: 'dia.observacoes.label', default: 'Observacoes')}"/>
+                <g:sortableColumn property="fimAlmoco"
+                                  title="${message(code: 'dia.fimAlmoco.label', default: 'Fim Almoco')}"/>
 
-                <th>
-                    Total de Horas
-                </th>
+                <g:sortableColumn property="saida" title="${message(code: 'dia.saida.label', default: 'Saida')}"/>
+
+                <th>Horas trabalhadas</th>
+
+                <th>Observações</th>
 
             </tr>
             </thead>
@@ -57,13 +56,15 @@
 
                     <td>${fieldValue(bean: diaInstance, field: "entrada")}</td>
 
-                    <td>${fieldValue(bean: diaInstance, field: "fimAlmoco")}</td>
-
                     <td>${fieldValue(bean: diaInstance, field: "inicioAlmoco")}</td>
 
-                    <td>${fieldValue(bean: diaInstance, field: "observacoes")}</td>
+                    <td>${fieldValue(bean: diaInstance, field: "fimAlmoco")}</td>
+
+                    <td>${fieldValue(bean: diaInstance, field: "saida")}</td>
 
                     <td>${diaInstance.horasTrabalhadas()}</td>
+
+                    <td>${diaInstance.observacoes}</td>
 
                 </tr>
             </g:each>
@@ -71,9 +72,14 @@
         </table>
     </div>
 
-    <div class="paginateButtons">
-        <g:paginate total="${diaInstanceTotal}"/>
-    </div>
+    <hr />
+    Horas previstas: ${horasPrevistas}
+    <br />
+    Horas horasRealizadas: ${horasRealizadas}
+    <br />
+    Saldo de horas: ${saldoHoras}
+    <hr />
+
 </div>
 </body>
 </html>

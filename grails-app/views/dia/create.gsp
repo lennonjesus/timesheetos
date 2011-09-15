@@ -50,6 +50,16 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
+                        <label for="inicioAlmoco"><g:message code="dia.inicioAlmoco.label"
+                                                             default="Inicio Almoco"/></label>
+                    </td>
+                    <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'inicioAlmoco', 'errors')}">
+                        <joda:timePicker name="incioAlmoco" value="${diaInstance.inicioAlmoco}" />
+                    </td>
+                </tr>
+
+                <tr class="prop">
+                    <td valign="top" class="name">
                         <label for="fimAlmoco"><g:message code="dia.fimAlmoco.label" default="Fim Almoco"/></label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'fimAlmoco', 'errors')}">
@@ -59,11 +69,10 @@
 
                 <tr class="prop">
                     <td valign="top" class="name">
-                        <label for="inicioAlmoco"><g:message code="dia.inicioAlmoco.label"
-                                                             default="Inicio Almoco"/></label>
+                        <label for="saida"><g:message code="dia.saida.label" default="Saida"/></label>
                     </td>
-                    <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'inicioAlmoco', 'errors')}">
-                        <joda:timePicker name="inicioAlmoco" value="${diaInstance.inicioAlmoco}" />
+                    <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'saida', 'errors')}">
+                        <joda:timePicker name="saida" value="${diaInstance.saida}" />
                     </td>
                 </tr>
 
@@ -73,15 +82,6 @@
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'observacoes', 'errors')}">
                         <g:textField name="observacoes" value="${diaInstance?.observacoes}"/>
-                    </td>
-                </tr>
-
-                <tr class="prop">
-                    <td valign="top" class="name">
-                        <label for="saida"><g:message code="dia.saida.label" default="Saida"/></label>
-                    </td>
-                    <td valign="top" class="value ${hasErrors(bean: diaInstance, field: 'saida', 'errors')}">
-                        <joda:timePicker name="saida" value="${diaInstance.saida}" />
                     </td>
                 </tr>
 

@@ -10,13 +10,13 @@ class Dia {
 
     LocalDate data
 
-    LocalTime entrada
+    LocalTime entrada = new LocalTime(9, 0)
 
-    LocalTime saida
+    LocalTime inicioAlmoco = new LocalTime(12, 0)
 
-    LocalTime inicioAlmoco
+    LocalTime fimAlmoco = new LocalTime(13, 0)
 
-    LocalTime fimAlmoco
+    LocalTime saida = new LocalTime(18, 0)
 
     String observacoes
 
@@ -24,20 +24,26 @@ class Dia {
 
         data type: PersistentLocalDate
         entrada type: PersistentLocalTimeAsTime
-        saida type: PersistentLocalTimeAsTime
         inicioAlmoco type: PersistentLocalTimeAsTime
         fimAlmoco type: PersistentLocalTimeAsTime
+        saida type: PersistentLocalTimeAsTime
 
     }
 
     static constraints = {
+        data(unique: true)
+        entrada (blank: true)
+        inicioAlmoco (blank: true)
+        fimAlmoco (blank: true)
+        saida (blank: true)
+        observacoes (blank: true)
     }
 
-    Integer horasTrabalhadas() {
+    BigDecimal horasTrabalhadas() {
         Period tempoTrabalho = new Period(entrada, saida)
         Period tempoAlmoco = new Period(inicioAlmoco, fimAlmoco)
 
-        return tempoTrabalho.hours - tempoAlmoco.hours
+        tempoTrabalho.hours - tempoAlmoco.hours
 
     }
 
